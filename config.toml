@@ -8,3 +8,4 @@ theme = "hugo-theme-relearn"
   disableSearch = true
   ordersectionsby = "weight"
   themeVariant = ["relearn-dark", "relearn-light"]
+  disableInlineCopyToClipBoard = true
