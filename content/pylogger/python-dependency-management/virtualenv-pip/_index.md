@@ -1,5 +1,5 @@
 ---
-title: "Virtual Environments & Pip"
+title: "Virtualenv & Pip"
 date: 2022-03-20
 draft: false
 hidden: false
