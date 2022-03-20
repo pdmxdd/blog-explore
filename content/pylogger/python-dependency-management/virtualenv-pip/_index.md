@@ -76,7 +76,7 @@ I have:
 
 - a project directory: (`pylogger/`)
 - A local git repo (`pylogger/.git`)
-  - ignoring dependency artifacts (`env_pylogger`)
+  - ignoring dependency artifacts (`env_pylogger` via `.gitignore`)
   - instructions for creating dependency artifacts (`requirements.txt`)
 - a remote git repo named origin: (`https://github.com/pdmxdd/pylogger`)
 
