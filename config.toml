@@ -1,0 +1,10 @@
+baseURL = ""
+languageCode = "en-us"
+title = "Explore"
+theme = "hugo-theme-relearn"
+[params]
+  author = "Paul Matthews"
+  showVisitedLinks = false
+  disableSearch = true
+  ordersectionsby = "weight"
+  themeVariant = ["relearn-dark", "relearn-light"]
