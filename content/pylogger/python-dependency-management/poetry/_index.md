@@ -88,8 +88,56 @@ I do like that a lock file was automatically written (so any subsequent environm
 
 However, the project is ready to go. With a simple adding of a remote repo, staging, committing, and [pushing](https://github.com/pdmxdd/pylogger-poetry) this project is ready for development.
 
-Overall I quite like the experience of Poetry. With just a couple of personal quirks (rst instead of md, no automatic git repo initialization) and a long dependency resolution window being the only concerns I have. And they are quite minor.
+## Adding Code
 
-It seems the pros far outweigh the cons.
+To make things simple I'm just adding a typical hello world.
 
-Based on this first experience I will happily start using Poetry for my Python projects. I'll probably overwrite the pylogger repo to use poetry and destroy the pylogger-poetry repo.
+After creating `pylogger_poetry/main.py` I add:
+
+```python
+if __name__ == "__main__":
+    print("hello world")
+```
+
+## Running Code
+
+### `poetry run python3 main.py`
+
+![poetry run python3 main.py](pictures/poetry-run-python-main.png)
+
+### `poetry shell` && `python3 main.py`
+
+![poetry shell && python3 main.py](pictures/poetry-shell-python-main.png)
+
+### `source /home/paul/.cache/pypoetry/virtualenvs/...`
+
+![source activate && python3 main.py](pictures/virtualenv-python-main.png)
+
+I don't personally like that the virtual environment is stored in `$HOME/.cache/pypoetry/virtualenvs/`, but looking at the [Poetry Configuration Documentation](https://python-poetry.org/docs/configuration/#virtualenvsin-project) you can easily set a global variable to force virtual environments to be created in a `.venv` directory in your project directory. I am very supportive of tools that give you the ability to customize details like this.
+
+## Final Thoughts
+
+I quite like the experience of Poetry. 
+
+I have a few **minor** complaints:
+
+- README defaults to rst instead of md (personal preference)
+- no automatic git repo initialization (personal preference)
+- long dependency resolution window
+
+I really **like**:
+
+- the `pyproject.toml`
+- the `poetry.lock` file
+- discrete default project directory & tests directory
+- you can configure poetry to create the virtual environment inside of the project directory
+
+I am currently ambivalent towards the `poetry shell`, and `poetry run python file.py`. 
+
+I can see how the abstraction over the isolated virtual environment allows a developer to focus on development instead of managing virtual environments which is certainly a benefit. However, it is still the responsibility of the developer to understand their virtual environment and I fear that beginners may never dive deeper into the underlying concepts when using poetry. Poetry isn't hiding this information. It clearly prints out where the virtual environment lives.
+
+However this is a very nitpicky complaint.
+
+Overall I feel the **pros far outweigh the cons**.
+
+Based on this first experience I will happily start using Poetry for my Python projects.
