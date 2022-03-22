@@ -41,6 +41,10 @@ Then give it a run:
 
 The script stops the listener and exits after one period of 30 second monitoring.
 
+### Source Code Snapshot
+
+[GitHub repo at this point in time](https://github.com/pdmxdd/pylogger/blob/1449a2c3f4d2fc4bb49dcffb554a9dbe277feecd/pylogger/main.py)
+
 ## Remove `on_release()`
 
 ## Only Print after Interval
