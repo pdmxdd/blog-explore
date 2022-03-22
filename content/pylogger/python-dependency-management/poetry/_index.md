@@ -136,7 +136,7 @@ I am currently ambivalent towards the `poetry shell`, and `poetry run python fil
 
 I can see how the abstraction over the isolated virtual environment allows a developer to focus on development instead of managing virtual environments which is certainly a benefit. However, it is still the responsibility of the developer to understand their virtual environment and I fear that beginners may never dive deeper into the underlying concepts when using poetry. Poetry isn't hiding this information. It clearly prints out where the virtual environment lives.
 
-However this is a very nitpicky complaint.
+Again, this is a nitpicky, personal complaint that wouldn't stop me from using the tool.
 
 Overall I feel the **pros far outweigh the cons**.
 
