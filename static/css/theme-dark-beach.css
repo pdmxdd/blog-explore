@@ -1,0 +1,38 @@
+/* my-custom-variant */
+:root {
+  --BOX-BG-color: #4A4F3E; /* background color of colored boxes */
+  --BOX-BLUE-color: #4e909c; /* background color of blue boxes */
+  --BOX-CAPTION-color: rgba( 240, 240, 240, 1 ); /* text color of colored box titles */
+  --BOX-GREEN-color: #4CB653; /* background color of green boxes */
+  --BOX-ORANGE-color: #b58d5a; /* background color of orange boxes */
+  --BOX-RED-color: #A6110A; /* background color of red boxes */
+  --BOX-TEXT-color: #e0e0e0; /* text color of colored box content */
+  --CODE-BLOCK-BG-color: #011619; /* fallback background color of block code; should be adjusted to your selected chroma style */
+  --CODE-BLOCK-BORDER-color: #2b2b2b; /* border color of block code */
+  --CODE-BLOCK-color: #4CB653; /* fallback text color of block code; should be adjusted to your selected chroma style */
+  --CODE-INLINE-BG-color: #011619; /* background color of inline code */
+  --CODE-INLINE-BORDER-color: #464646; /* border color of inline code */
+  --CODE-INLINE-color: #4CB653; /* text color of inline code */
+  --MAIN-BG-color: #98a27d; /* background color of content */
+  --MAIN-LINK-color: #005862; /* link color of content */
+  --MAIN-LINK-HOVER-color: #4e909c; /* hoverd link color of content */
+  --MAIN-TEXT-color: #011619; /* text color of content and h1 titles */
+  --MAIN-TITLES-H2-color: #002d33; /* text color of h2-h6 titles */
+  --MAIN-TITLES-H3-color: #005862; /* text color of h3-h6 titles */
+  --MAIN-TITLES-TEXT-color: #011619; /* text color of h2-h6 titles and transparent box titles */
+  --MENU-HEADER-BG-color: #005862; /* background color of menu header */
+  --MENU-HOME-LINK-color: #98a27d; /* home button color if configured */
+  --MENU-HOME-LINK-HOVER-color: #b58d5a; /* hoverd home button color if configured */
+  --MENU-SEARCH-BG-color: #011619; /* background color of search box */
+  --MENU-SEARCH-BORDER-color: #e0e0e0; /* border color of search box */
+  --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #002d33; /* background color of the displayed menu topic */
+  --MENU-SECTION-ACTIVE-CATEGORY-color: #b58d5a; /* text color of the displayed menu topic */
+  --MENU-SECTION-HR-color: #323232; /* separator color of menu footer */
+  --MENU-SECTIONS-ACTIVE-BG-color: #005862; /* background color of the active menu section */
+  --MENU-SECTIONS-BG-color: #011619; /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
+  --MENU-SECTIONS-LINK-color: #98a27d; /* link color of menu topics */
+  --MENU-SECTIONS-LINK-HOVER-color: #b58d5a; /* hoverd link color of menu topics */
+  --MENU-VISITED-color: #b58d5a; /* icon color of visited menu topics if configured */
+  --MERMAID-theme: dark; /* name of the default Mermaid theme for this variant, can be overridden in config.toml */
+  --SWAGGER-theme: dark; /* name of the default Swagger theme for this variant, can be overridden in config.toml */
+}

@@ -1,0 +1,25 @@
+/* my-custom-variant */
+:root {
+  --BOX-ORANGE-color: #b37b56; /* background color of orange boxes */
+  --CODE-BLOCK-BG-color: #000000; /* fallback background color of block code; should be adjusted to your selected chroma style */
+  --CODE-BLOCK-BORDER-color: #dde3e3; /* border color of block code */
+  --CODE-BLOCK-color: #99abb9; /* fallback text color of block code; should be adjusted to your selected chroma style */
+  --CODE-INLINE-BG-color: #000000; /* background color of inline code */
+  --CODE-INLINE-BORDER-color: #dde3e3; /* border color of inline code */
+  --CODE-INLINE-color: #99abb9; /* text color of inline code */
+  --MAIN-ANCHOR-color: #134fbf; /* anchor color of titles */
+  --MAIN-BG-color: #3d455c; /* background color of content */
+  --MAIN-LINK-color: #99abb9; /* link color of content */
+  --MAIN-LINK-HOVER-color: #486ac9; /* hoverd link color of content */
+  --MAIN-TEXT-color: #dde3e3; /* text color of content and h1 titles */
+  --MAIN-TITLES-TEXT-color: #dde3e3; /* text color of h2-h6 titles and transparent box titles */
+  --MAIN-TITLES-TEXT-font: #dde3e3; /* text font of h2-h6 titles and transparent box titles */
+  --MENU-HEADER-BG-color: #b37b56; /* background color of menu header */
+  --MENU-SEARCH-BORDER-color: #e0e0e0; /* border color of search box */
+  --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #dde3e3; /* background color of the displayed menu topic */
+  --MENU-SECTIONS-ACTIVE-BG-color: #60402b; /* background color of the active menu section */
+  --MENU-SECTIONS-BG-color: #503624; /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
+  --MENU-SECTIONS-LINK-HOVER-color: #ffffff; /* hoverd link color of menu topics */
+  --MENU-VISITED-color: #3d455c; /* icon color of visited menu topics if configured */
+  --SWAGGER-theme: light; /* name of the default Swagger theme for this variant, can be overridden in config.toml */
+}
