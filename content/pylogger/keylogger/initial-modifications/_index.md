@@ -71,8 +71,52 @@ Alright, it's no longer doubling up our prints!
 
 [GitHub repo at this point in time](https://github.com/pdmxdd/pylogger/blob/9efe1ca56eb65be5099bf6009d52ddc5a617894c/pylogger/main.py)
 
-## Only Print after Interval
+## Fix Typo
+
+If you look at STDOUT it is always displaying `special key`, which is odd. For the alphanumeric characters it's supposed to print out `alphanumeric`. We have our first bug.
+
+Let's take a look at the section of our code responsible for printing the `on_press` function:
+
+```python
+def on_press(key):
+    try:
+        print('alphanumeric key {0} pressed'.format(key.car))
+    except AttributeError:
+        print('special key {0} pressed'.format(key))
+```
+
+I **highly doubt** the key object has a `.car` attribute. However, it probably has a `.char` attribute.
+
+Let's fix that error and re-run the project.
+
+![Run after fixing typo](pictures/fix-typo.png)
+
+Nice.
 
 ## Modify `on_press()`
+
+The provided on_press() function is a great start. However, I don't want to track **all** key presses as many of the keys don't really matter to me, like the function keys, ctrl, alt, and d-pad.
+
+I'm really interested in the following data:
+
+- typed words (`alphanumeric`)
+- typed numbers (`alphanumeric`)
+- space bar (special: `Key.space`)
+- tab (special: `Key.tab`)
+- enter (special: `Key.enter`)
+- backspace (special: `Key.backspace`)
+- delete (special: `Key.delete`)
+
+### Print only `alphanumeric`
+
+### Also `Key.space` as `" "`
+
+### Also `Key.tab` as `" "`
+
+### Also `Key.enter` as `"<ENTER>"`
+
+### Also `Key.delete` as `"<DELETE>"`
+
+## `Key.backspace` Removes Last List Item
 
 ## Infinitely Loop
