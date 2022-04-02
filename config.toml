@@ -7,5 +7,5 @@ theme = "hugo-theme-relearn"
   showVisitedLinks = false
   disableSearch = true
   ordersectionsby = "weight"
-  themeVariant = ["dark-beach", "light-forest", "dark-forest", "relearn-dark", "relearn-light"]
+  themeVariant = ["light-space", "dark-space", "dark-space-lighter-menu", "dark-beach", "light-forest", "dark-forest", "relearn-dark", "relearn-light"]
   disableInlineCopyToClipBoard = true
