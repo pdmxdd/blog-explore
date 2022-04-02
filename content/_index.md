@@ -7,7 +7,7 @@ date: "2022-03-19"
 
 ## Welcome
 
-Welcome to my explore blog.
+Welcome to my **explore** blog. I learn most effectively by *doing* and *exploring*.
 
 This is where I actively *explore* projects, concepts, really anything in tech that interests me.
 
@@ -17,8 +17,10 @@ I have a lot of experience in both technical curriculum development and teaching
 
 ## About Me
 
-I'm Paul.
+I'm Paul Matthews.
 
-I'm a programmer, Linux enthusiast, DevOps dabbler, curriculum developer and teacher.
+Professionally, I'm a programmer, Linux enthusiast, DevOps dabbler, curriculum developer, learner and teacher.
 
-If you want to learn more about me checkout my [personal website](https://paulmatthews.dev) or [email me](mailto:paul@paulmatthews.dev)
+Personally, I'm a husband, father, nerd, tech enthusiast, cook, learner, teacher and more.
+
+If you want to learn more about me checkout my [personal website](https://paulmatthews.dev), [email me](mailto:paul@paulmatthews.dev), or checkout my [GitHub account](https://github.com/pdmxdd).

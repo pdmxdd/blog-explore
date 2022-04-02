@@ -1,11 +1,19 @@
-baseURL = ""
+baseURL = "https://explore.paulmatthews.dev/"
 languageCode = "en-us"
 title = "Explore"
 theme = "hugo-theme-relearn"
 [params]
   author = "Paul Matthews"
   showVisitedLinks = false
-  disableSearch = true
+  disableSearch = false
   ordersectionsby = "weight"
   themeVariant = ["light-space", "dark-space", "dark-space-lighter-menu", "dark-beach", "light-forest", "dark-forest", "relearn-dark", "relearn-light"]
   disableInlineCopyToClipBoard = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[[menu.shortcuts]]
+  name = "Personal Site"
+  url = "https://paulmatthews.dev"
+  weight = "9999"
