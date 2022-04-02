@@ -28,10 +28,10 @@
   --MENU-SEARCH-BORDER-color: #eeefea; /* border color of search box */
   --MENU-SEARCH-color: #eeefea; /* text and icon color of search box */
   --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #eeefea; /* background color of the displayed menu topic */
-  --MENU-SECTION-ACTIVE-CATEGORY-color: #0e000d; /* text color of the displayed menu topic */
+  --MENU-SECTION-ACTIVE-CATEGORY-color: #2e2036; /* text color of the displayed menu topic */
   --MENU-SECTION-HR-color: #eeefea; /* separator color of menu footer */
-  --MENU-SECTIONS-ACTIVE-BG-color: #0e000d; /* background color of the active menu section */
-  --MENU-SECTIONS-BG-color: #0e000d; /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
+  --MENU-SECTIONS-ACTIVE-BG-color: #2e2036; /* background color of the active menu section */
+  --MENU-SECTIONS-BG-color: #2e2036; /* background of the menu; this is NOT just a color value but can be a complete CSS background definition including gradients, etc. */
   --MENU-SECTIONS-LINK-color: #eeefea; /* link color of menu topics */
   --MENU-SECTIONS-LINK-HOVER-color: #f8d092; /* hoverd link color of menu topics */
   --MENU-VISITED-color: #159097; /* icon color of visited menu topics if configured */
