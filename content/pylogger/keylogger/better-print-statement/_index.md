@@ -48,3 +48,4 @@ Even better.
 
 ## Source Code Snapshot
 
+[GitHub repo at this point in time](https://github.com/pdmxdd/pylogger/tree/211f75c76d9460b2240ec305292ae024a633de00)
