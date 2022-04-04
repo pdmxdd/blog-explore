@@ -1,7 +1,7 @@
 ---
 title: "Add Main Method"
 date: "2022-04-02"
-weight: 100
+weight: 105
 ---
 
 ## Add main
