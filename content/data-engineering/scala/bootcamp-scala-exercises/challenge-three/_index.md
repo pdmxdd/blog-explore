@@ -209,7 +209,120 @@ I originally got caught up when I just did `ENCODING.get`, not realizing it was 
 
 However, since I'm still new to `Scala` I'm going to add some new tests, just to give myself more confidence in the solution I have written, and give me a taste of writing tests. Which is always a good idea, but Scala pushes you in that direction by the very language they use, they call the methods you write Units.
 
+### More Tests
+
+I added the following three tests to the grouping created by the `describe()` block: 
+
+```scala
+    it("can decode 'hgiikf' to 'butter'") {
+      assert(SecretRecipeDecoder.decodeString("hgiikf") === "butter")
+    }
+    it("can decode 'lygw' to 'paul'") {
+      assert(SecretRecipeDecoder.decodeString("lygw") === "paul")
+    }
+    it("can decode '2 laqio' to '4 pints") {
+      assert(SecretRecipeDecoder.decodeString("2 laqio") === "4 pints")
+    }
+```
+
+### Result: PASS!
+
+The syntax for writing tests using `scalatest` is very similar to `jest` with `Node`.
+
+I am very comfortable with testing frameworks that use:
+
+- `describe()`
+- `it()`
+- `assert()`
+
 ## Challenge Two: Decode an ingredient
+
+### Test
+
+```scala
+  describe("Testing decode_ingredient") {
+    it("can decode an ingredient") {
+      val expected = Ingredient("1 cup", "butter")
+      val actual = SecretRecipeDecoder.decodeIngredient("8 vgl#hgiikf")
+      assert(actual.amount === expected.amount)
+      assert(actual.description === expected.description)
+    }
+  }
+```
+
+### Starter
+
+```scala
+  def decodeIngredient(line: String): Ingredient = {
+    // todo: implement me
+    Ingredient("1 cup", "butter")
+  }
+```
+
+Additionally a class has been defined:
+
+```scala
+case class Ingredient(amount: String, description: String)
+```
+
+Putting it together the `decodeIngredient()` method takes an encoded line like `8 vgl#hgiikf` and should return an Ingredient object like `Ingredient("1 cup", "butter").
+
+Pretty straightforward especially since we already have the `decodeString()` method.
+
+### My Solution
+
+```scala
+  def decodeIngredient(line: String): Ingredient = {
+    val ingredient_as_list = line.split("#").map(ENCODING.getOrElse(_, " "))
+    Ingredient(ingredient_as_list(0), ingredient_as_list(1))
+  }
+```
+
+{{% notice note %}}
+I was not expecting to access the ingredient list with parenthesis `()` and an index. That's a bit different than the square brackets I'm used to `[]`, but a simple google search for the scala docs put me right.
+{{% /notice %}}
+
+### Result: PASS!
+
+A working solution.
+
+However, I'm just duplicating the work I performed in `decodeString()` and am not using it. I need to fix that...
+
+```scala
+  def decodeIngredient(line: String): Ingredient = {
+    val ingredient_as_list = line.split("#").map(decodeString)
+    Ingredient(ingredient_as_list(0), ingredient_as_list(1))
+  }
+```
+
+### Result: PASS!
+
+I wouldn't say it's a great solution, but I don't know Scala well enough to know how to achieve things the scala way.
+
+I might play with this more in the future, but will consider it done for now.
 
 ## Challenge Three: Decode the entire recipe
 
+Ok no provided tests, and this last section should exist in the `main()` method according to the readme:
+
+```md
+In the `main` method, read all of the ingredients out of `secret_recipe.txt`, decode each ingredient (hopefully using the functions
+you implemented above), and save the output into a new file named `decoded_recipe.txt`.
+```
+
+### My Solution
+
+```scala
+  def main(args: Array[String]): Unit = {
+    val bufferedSource = Source.fromFile("src/main/resources/secret_recipe.txt")
+    val lines = bufferedSource.getLines
+    val decodedLines = lines.map(decodeString)
+    val write_file = new File("src/main/resources/decoded_recipe.txt")
+    val print_writer = new PrintWriter(write_file)
+    decodedLines.foreach(print_writer.println)
+    print_writer.close()
+    bufferedSource.close()
+  }
+```
+
+Not going to lie, that one took me a good half hour. Mainly getting Java file I/O operations to work...
