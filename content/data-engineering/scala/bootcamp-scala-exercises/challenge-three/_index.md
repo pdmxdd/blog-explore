@@ -325,4 +325,119 @@ you implemented above), and save the output into a new file named `decoded_recip
   }
 ```
 
-Not going to lie, that one took me a good half hour. Mainly getting Java file I/O operations to work...
+Not going to lie, that one took me a good half hour. Mainly getting Java file I/O operations to work... I've done lots of flat file manipulation with Python, but far less with Java so it took a hot minute.
+
+I also added to the HashMap:
+
+```scala
+    "/" -> "/",
+    "," -> ","
+```
+
+So that the backslashes and commas would not be overwritten as empty spaces.
+
+### Output
+
+Upon running the main method I had a new file (`decoded_recipe.txt`) with the contents:
+
+```txt
+1 cup butter
+1 cup dark brown sugar, packed
+1 cup granulated sugar
+2 eggs
+1 teaspoon vanilla
+2 1/2 cups oatmeal
+2 cups flour
+1/2 teaspoon salt
+1 teaspoon baking soda
+1 teaspoon baking powder
+12 ounces chocolate chips
+1 4 ounce milk chocolate bar
+1 1/2 cups chopped nuts
+
+```
+
+{{% notice blue "COOKIES" "cookie" %}}
+How nice. A recipe for oatmeal cookies.
+
+I wonder who else approves?
+{{% /notice %}}
+{{< hugo-giphy-shortcode BsUORZkF3gBqg >}}
+
+Upon looking at my solution, I never used the `decodeIngredient()` method. I guess I'll rework it.
+
+## More Code
+
+The simple change to:
+
+```scala
+  def main(args: Array[String]): Unit = {
+    val bufferedSource = Source.fromFile("src/main/resources/secret_recipe.txt")
+    val lines = bufferedSource.getLines
+    val decodedIngredients = lines.map(decodeIngredient)
+    val write_file = new File("src/main/resources/decoded_recipe.txt")
+    val print_writer = new PrintWriter(write_file)
+    decodedIngredients.foreach(print_writer.println)
+    print_writer.close()
+    bufferedSource.close()
+  }
+```
+
+Results in:
+
+```txt
+Ingredient(1 cup,butter)
+Ingredient(1 cup,dark brown sugar, packed)
+Ingredient(1 cup,granulated sugar)
+Ingredient(2,eggs)
+Ingredient(1 teaspoon,vanilla)
+Ingredient(2 1/2 cups,oatmeal)
+Ingredient(2 cups,flour)
+Ingredient(1/2 teaspoon,salt)
+Ingredient(1 teaspoon,baking soda)
+Ingredient(1 teaspoon,baking powder)
+Ingredient(12 ounces,chocolate chips)
+Ingredient(1,4 ounce milk chocolate bar)
+Ingredient(1 1/2 cups,chopped nuts)
+```
+
+Which isn't a bad print statement for objects, but it still could be better.
+
+## even more code
+
+```scala
+  def main(args: Array[String]): Unit = {
+    val bufferedSource = Source.fromFile("src/main/resources/secret_recipe.txt")
+    val lines = bufferedSource.getLines
+    val decodedIngredients = lines.map(decodeIngredient)
+    val write_file = new File("src/main/resources/decoded_recipe.txt")
+    val print_writer = new PrintWriter(write_file)
+    print_writer.println("Ingredients:")
+    decodedIngredients.foreach(ingredient => print_writer.println(f"${ingredient.amount} ${ingredient.description}"))
+    print_writer.close()
+    bufferedSource.close()
+  }
+```
+
+Results in:
+
+```txt
+Ingredients:
+1 cup butter
+1 cup dark brown sugar, packed
+1 cup granulated sugar
+2 eggs
+1 teaspoon vanilla
+2 1/2 cups oatmeal
+2 cups flour
+1/2 teaspoon salt
+1 teaspoon baking soda
+1 teaspoon baking powder
+12 ounces chocolate chips
+1 4 ounce milk chocolate bar
+1 1/2 cups chopped nuts
+```
+
+Now I've got it!
+
+This exercise is very similar to a Morse Code HashMap decoder project I put together for one of the last classes I taught. Rebuilding it in Scala would probably be some solid practice.
