@@ -17,8 +17,6 @@ I think I will rebuild it in `Scala` as it compliments the challenge I just comp
 
 ## New Project
 
-Uhh...
-
 I created a hello-world project earlier with `sbt`. It didn't have maven, but I don't think this project will need anything outside of Scala's standard library so I'll just create it with `sbt`.
 
 ```bash
