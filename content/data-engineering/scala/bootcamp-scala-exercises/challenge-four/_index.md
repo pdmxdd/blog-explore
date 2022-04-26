@@ -252,7 +252,7 @@ Final test suite.
   }
 ```
 
-A readable solution. If the tests pass I'll try to make it more concise.
+A readable solution. If the tests pass I'll try to onelineify it.
 
 ### Result: PASS
 
