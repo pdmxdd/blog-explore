@@ -1,5 +1,0 @@
-#!/bin/bash
-
-rm -rf public/
-hugo
-scp -r public/ root@142.93.14.22:/website/explore
