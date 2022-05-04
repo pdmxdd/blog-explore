@@ -1,5 +1,5 @@
 ---
-title: "Daily Matchups"
+title: "Web Scraping: Daily Matchups"
 weight: 100
 date: "2022-04-04"
 ---
