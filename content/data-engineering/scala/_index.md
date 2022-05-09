@@ -65,3 +65,7 @@ Output:
 ![ammonite REPLI](pictures/ammonite.png)
 
 Looks like everything is installed.
+
+## Articles
+
+{{% children %}}

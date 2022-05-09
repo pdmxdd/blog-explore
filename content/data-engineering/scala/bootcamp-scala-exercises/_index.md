@@ -44,3 +44,7 @@ Pretty straightforward, just making sure the project is all setup within Intelli
 Up and running. 
 
 Although I haven't used IntelliJ much lately, it's always been a pleasure to work with.
+
+## Articles
+
+{{% children %}}
