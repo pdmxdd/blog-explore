@@ -42,7 +42,7 @@ Now every five minutes the script will fire and create a new CSV file with the p
 
 ## Concern
 
-I planned for this, but if I make a request every 5 minutes and the data is updated every 60 minutes, the data in the requested CSV **won't fall off, until 60 minutes have gone by**!
+I planned for this, but if I make a request every 5 minutes and the data is updated every 1 minute and contains 60 minutes worth of data, the data in the requested CSV **won't fall off, until 60 minutes have gone by**!
 
 This means I would be heavily duplicating data. Essentially every request would have 55 minutes of duplicate data.
 
