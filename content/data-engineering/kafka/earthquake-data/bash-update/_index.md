@@ -54,7 +54,7 @@ The following morning I was greeted with:
 
 ![](pictures/bash-python-eq-data-morning.png)
 
-Lots of data!
+Lots of data! So much I had to use `tmux` to split my terminal to display almost all of the data. 
 
 Let's see exactly how much data and that our hashes should match the records exactly:
 
