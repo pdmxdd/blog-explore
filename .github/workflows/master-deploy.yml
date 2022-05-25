@@ -25,6 +25,8 @@ jobs:
 
       - name: checksies
         run: ls
+        
+      - name: double trouble
         run: ls public
 
       # - name: Deliver
