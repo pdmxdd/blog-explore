@@ -9,8 +9,7 @@ jobs:
     name: Install Hugo, Checkout Source Code, Build Artifacts & Deliver
     runs-on: ubuntu-latest
     steps:
-      - name: test
-      run: echo "hello-world"
+      - run: echo "hello-world"
       # - name: Checkout source code 
       # uses: actions/checkout@master
       # with:
