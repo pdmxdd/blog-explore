@@ -9,11 +9,12 @@ jobs:
     name: Install Hugo, Checkout Source Code, Build Artifacts & Deliver
     runs-on: ubuntu-latest
     steps:
-      - name: checkout master
-      uses: actions/checkout@v3
-      with:
-        submodules: true
-        fetch-depth: 0
+      - run: echo "print first?"
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+          fetch-depth: 0
 
       # - name: Install Hugo
       # uses: peaceiris/actions-hugo@v2
