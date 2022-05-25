@@ -9,9 +9,8 @@ jobs:
     name: Install Hugo, Checkout Source Code, Build Artifacts & Deliver
     runs-on: ubuntu-latest
     steps:
-      - run: echo "print first?"
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@master
         with:
           submodules: true
           fetch-depth: 0
