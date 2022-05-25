@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      name: Checkout source code 
       with:
         submodules: true
         fetch-depth: 0
