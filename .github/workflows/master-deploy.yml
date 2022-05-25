@@ -8,7 +8,6 @@ jobs:
   dependencies_checkout_build_deliver:
     name: Install Hugo, Checkout Source Code, Build Artifacts & Deliver
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout source code 
       uses: actions/checkout@master
