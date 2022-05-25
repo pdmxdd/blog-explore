@@ -1,9 +1,9 @@
 name: Deploy Master on Merge
 
 on:
-  merge:
-    branches:
-      - master
+  - push
+    # branches:
+    #   - master
 
 jobs:
   dependencies_checkout_build_deliver:
