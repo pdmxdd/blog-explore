@@ -9,7 +9,8 @@ jobs:
     name: Install Hugo, Checkout Source Code, Build Artifacts & Deliver
     runs-on: ubuntu-latest
     steps:
-      - uses: "actions/checkout@master"
+      - name: checkout master
+      uses: actions/checkout@v3
       with:
         submodules: true
         fetch-depth: 0
