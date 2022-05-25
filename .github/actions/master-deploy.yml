@@ -1,7 +1,6 @@
 name: Deploy Master on Merge
 
-on:
-  - push
+on: [push]
     # branches:
     #   - master
 
