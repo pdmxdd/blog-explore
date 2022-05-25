@@ -23,12 +23,6 @@ jobs:
       - name: Build
         run: hugo --minify --gc
 
-      # - name: checksies
-      #   run: ls
-        
-      # - name: double trouble
-      #   run: ls public
-
       - name: Deliver
         uses: appleboy/scp-action@master
         with:
